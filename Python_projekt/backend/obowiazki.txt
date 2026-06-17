@@ -1,0 +1,71 @@
+Podzial obowiazkow
+
+Anastasiya - Backend, FastAPI, baza danych
+Pliki:
+- main.py
+- database.py
+- models.py
+- schemas.py
+- obowiazki.txt
+
+Zadania:
+- uruchomic aplikacje FastAPI,
+- podlaczyc baze danych MoodTracker przez SQLAlchemy i pyodbc,
+- opisac model User zgodny z tabela Users z pliku SQL,
+- zrobic endpoint POST /auth/register:
+  przyjmuje username, email, password,
+  sprawdza, czy username albo email juz istnieje,
+  zapisuje uzytkownika w tabeli Users,
+  zwraca dane uzytkownika
+- zrobic endpoint POST /auth/login:
+  przyjmuje username i password,
+  sprawdza dane w bazie
+  zwraca dane uzytkownika, jezeli login sie udal
+
+Mariusz - API zartow
+Pliki:
+- routes/jokes.py
+- services/joke_api.py
+
+Zadania:
+- podlaczyc JokeAPI,
+- zrobic funkcje pobierajaca zart z zewnetrznego API (https://v2.jokeapi.dev/?ref=freepublicapis.com),
+- dodac filtrowanie zartu wedlug nastroju uzytkownika,
+- zrobic endpoint do pobierania zartu, np. GET /jokes?mood=happy,
+- przygotowac endpoint do oceny zartu plus/minus,
+- zapisac ocene do tabeli JokeRatings,
+- zwracac frontendowi tekst zartu w prostym formacie JSON
+
+Piotrek - Notatki i historia nastroju
+Pliki:
+- routes/notes.py
+- models.py, jezeli trzeba dopisac modele Note i MoodEntry
+
+Zadania:
+- przygotowac CRUD notatek:
+  dodawanie notatki,
+  wyswietlanie listy notatek,
+  edycja notatki,
+  usuwanie notatki
+- zapisywac notatki w tabeli Notes
+- zapis wybranego nastroju do tabeli MoodEntries
+- zrobic endpoint pokazujacy historie nastrojow
+- zrobic endpoint pokazujacy historie notatek
+
+Wowa - Frontend
+Pliki:
+- frontend/
+
+Zadania:
+zrobic
+- strony rejestracji i logowania
+- ekran wyboru nastroju
+- ekran wyswietlania zartu
+- dodac przyciski oceny zartu plus/minus
+- formularz dodawania notatki
+- widok historii nastrojow i notatek
+- palaczyc z backendem 
+- po logowaniu przechowywac podstawowe dane uzytkownika
+
+
+P.S. script do bazy danych znajduje sie w pliku sql
