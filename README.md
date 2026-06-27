@@ -18,3 +18,29 @@ SQL Server Management Studio (19)
 SQLAlchemy
 HTML, CSS, JavaScript
 JokeAPI
+
+
+<!-- 
+Instalacja venv lokalnie:
+Linux python3 -m venv venv / Windows python -m venv .venv
+Linux source venv/bin/activate / Windows .venv\Scripts\activate.bat
+cd Python_projekt//backend/
+pip install -r requirements.txt 
+
+
+Ustawianie sekretów dla bazy na Azure.
+Linux
+export DB_SERVER="sqlserverforpythonapp123.database.windows.net"
+export DB_NAME="SqlDatabasePython"
+export DB_USER="sqlserverpython"
+export DB_PASSWORD="SqlServerPassword123!"
+uvicorn main:app --reload
+
+
+Windows
+$env:DB_SERVER="sqlserverforpythonapp123.database.windows.net"
+$env:DB_NAME="SqlDatabasePython"
+$env:DB_USER="sqlserverpython"
+$env:DB_PASSWORD="SqlServerPassword123!"
+uvicorn main:app --reload 
+-->

@@ -2,3 +2,5 @@ fastapi
 uvicorn
 sqlalchemy
 pyodbc
+passlib
+python-dotenv
