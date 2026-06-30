@@ -20,3 +20,25 @@ class UserResponse(BaseModel):
     username: str
     email: str
     created_at: datetime | None = None
+
+    class Config:
+        from_attributes = True
+
+class NoteResponse(BaseModel):
+    note_id: int
+    user_id: int
+    note_text: str
+    created_at: datetime | None = None
+
+    class Config:
+        from_attributes = True
+
+class MoodEntryResponse(BaseModel):
+    mood_id: int
+    user_id: int
+    mood: str
+    created_at: datetime | None = None
+
+    class Config:
+        from_attributes = True
+

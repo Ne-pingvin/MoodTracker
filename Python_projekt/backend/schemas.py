@@ -45,3 +45,24 @@ class JokeRatingResponse(BaseModel):
 	rating: bool
 	mood_at_moment: str | None = None
 	created_at: datetime | None = None
+
+class NoteCreate(BaseModel):
+    note_text: str = Field(min_length=1)
+
+class NoteUpdate(BaseModel):
+    note_text: str = Field(min_length=1)
+
+class NoteResponse(BaseModel):
+    note_id: int
+    user_id: int
+    note_text: str
+    created_at: datetime | None = None
+
+class MoodEntryCreate(BaseModel):
+    mood: str = Field(min_length=2, max_length=20)
+
+class MoodEntryResponse(BaseModel):
+    mood_id: int
+    user_id: int
+    mood: str
+    created_at: datetime | None = None

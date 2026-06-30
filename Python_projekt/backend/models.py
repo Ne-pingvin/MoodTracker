@@ -21,3 +21,19 @@ class JokeRating(Base):
     Rating = Column(Boolean, nullable=False)
     MoodAtMoment = Column(String(20), nullable=True)
     CreatedAt = Column(DateTime, server_default=func.now())
+
+class MoodEntry(Base):
+    __tablename__ = "MoodEntries"
+
+    MoodID = Column(Integer, primary_key=True, index=True)
+    UserID = Column(Integer, ForeignKey("Users.UserID", ondelete="CASCADE"), nullable=False, index=True)
+    Mood = Column(String(20), nullable=False)
+    CreatedAt = Column(DateTime, server_default=func.now())
+
+class Note(Base):
+    __tablename__ = "Notes"
+
+    NoteID = Column(Integer, primary_key=True, index=True)
+    UserID = Column(Integer, ForeignKey("Users.UserID", ondelete="CASCADE"), nullable=False, index=True)
+    NoteText = Column(String, nullable=False)
+    CreatedAt = Column(DateTime, server_default=func.now())
