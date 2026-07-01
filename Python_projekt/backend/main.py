@@ -1,7 +1,7 @@
 from fastapi import FastAPI
+from routes import auth, jokes, notes
 
 from database import Base, engine
-from routes import auth, jokes
 
 #Inicjalizacja bazy danych
 Base.metadata.create_all(bind=engine)
@@ -12,6 +12,7 @@ app = FastAPI(title="Mood Tracker API")
 #podlacza autoryzacje
 app.include_router(auth.router)
 app.include_router(jokes.router)
+app.include_router(notes.router)
 
 #test
 @app.get("/")

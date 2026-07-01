@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base #zwraca klase 'Base' dla klas, ktore
 from sqlalchemy.orm import sessionmaker #polaczenia do zapytan
 
 # # Ustawienia polaczenia
-SERVER = "localhost"
+SERVER = r"(localdb)\MSSQLLocalDB"
 DATABASE = "MoodTracker"
 
 #polaczenie SQLAlchemy z SQL Server przez pyodbc
